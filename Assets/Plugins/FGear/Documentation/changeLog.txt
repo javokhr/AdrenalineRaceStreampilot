@@ -1,0 +1,246 @@
+------------------------------------------------------------------------------------------
+v1.11
+-convex casting option
+-wheel reaction forces
+-ability to turn engine on/off
+-tire models are converted to scriptable objects
+-ability to auto calculate wheel sizes
+-bug fixes & improvements
+
+Notes
+-convex casting creates a rigidbody that is marked as a trigger in order to avoid collisions.
+-when you do not provide a mesh for convex casting, unity's default cylinder mesh is used.
+-if you want to provide a custom mesh for casting, make sure it's size and orientation matches the unity's default cylinder model.
+-you can see the convex mesh used for casting when you enable gizmo view and select the vehicle.
+-some mesh colliders may have problems with convex casting, try selecting "Everything" in Cooking Options
+-engine start/stop can be complemented with sound effects
+-if you want to create a new tire model, use Create->FGear menu in the project panel.
+-auto wheel size calculation can generate weird values in some cases.
+-vehicles failed to stay on rotating objects, its fixed now.
+-in some cases throttling failed to generate wheel torque when the vehicle goes backwards while in 1st gear, this is fixed now.
+-SuspensionConstraint is modified to use a different limit position which behaves better when limits are wildly violated.
+-SuspensionConstraint sets your vehicle's rigidbody's "solverVelocityIterations" value to be 2 as minumum.
+
+------------------------------------------------------------------------------------------
+v1.10
+-fixed sequential gearbox bug
+-auto clutch option added
+-force symmetry option for tire models
+
+Notes
+-the clutch input was wrong for the sequential gearbox and it was not possible to change gears, it is fixed now
+-with the manual clutch you can simulate sequential gear changes by pressing the clutch like a motorcycle or you can change like f1 gearbox with autoclutch
+-tire model parameters can generate asymmetric curves and it can rarely cause problems. force symmetry option
+ forces the tire model to generate a symmetric curve by mirroring the y-axis of the curve
+
+------------------------------------------------------------------------------------------
+v1.9
+-new suspension constraint script
+-improved sticky tires
+-simplified network sample(client authoritative)
+-updated mobile sample scene
+-suspension relaxation damper option
+-clutch power scale option
+-bug fixes & improvements
+
+Notes
+-suspension constraint adds a configurable joint to each wheel and updates their limits at each tick
+-hard contact option used to apply extra forces but it applies impulse for more stable behavior
+ in any case it is recommended to use SuspensionConstraint script instead
+-sticky tire state is represented as a float instead of bool now. this value is used to scale tire forces to get a more consistent behavior
+-previous network sample was server authoritative but was not working properly
+ it seems that client predicted proper networking is not possible with physx
+ we replaced the implementation with a simpler client authoritative network
+-clutch state calculation bug fixed in StandardInput
+-clutch power scale can result jittery behavior if you use larger values
+-feedback torque calculation is clamped to avoid weak responses caused by tire model problems
+-"Allow Wheel Rotation Against Engine" option had a bug that caused vehicles to move forward without throttling, it is fixed now
+-effects script had a bug that caused vehicles to continue playing previous surface sounds, it is fixed now
+-suspension damper param is divided into compression and relaxation damper params
+-if "Relexation Damper Downforce" is checked, relaxation damper can generate forces that can pull the vehicle towards the ground
+-rear gear max speed is also displayed in custom ui now
+-simpledrive.scene is removed, mustang model is used in varying_grip.scene now
+-rewind replay can pause on both ends(begin/end) now
+
+------------------------------------------------------------------------------------------
+v1.8
+-rewind and replay sample
+-ability to drive on moving rigidbodies
+-new alternate bike script
+-bug fixes & improvements
+
+Notes:
+-allow rotation against engine option had a problem with idle vehicles, it is fixed now
+-it is possible to stop auto input update now, you can manually update input when needed
+-instant suspension contacts could generate huge forces, it is clamped now
+-there was a bug that effected 4wd vehicles that have different radius for each axle(like a tractor), it is fixed now
+-antirollbars in arcade assists were buggy, they are adapted to the current suspension implementation
+-MinRecoverAssistSpeed parameter added to recovery assist in arcade assists
+-sphere casting had a bug that could skip potential contacts, it is fixed now
+-Tire96 could cause self steering issues, RV6 parameter is set to zero to solve the problem
+-zero surface count could generate errors in Effects script, it is fixed now
+-changing active car with CarManager had a problem so that the disabled car could continue with the same inputs,
+ the inputs of the inactive vehicles are reset now
+-some unused legacy vehicle prefabs are removed
+-rewindreplay saves a lot of state data, may be used for multiplayer in the future
+
+------------------------------------------------------------------------------------------
+v1.7
+-auto reverse option for transmission
+-ability to throttle & brake at the same time
+-sticky tire option for low speed slipping issues
+-sphere casting option
+-option to avoid tire-ground penetration
+-ability set radius for individual wheels
+-ability to set instant cruise speed
+-bug fixes & improvements
+
+Notes:
+-a glitch in sequential gear input fixed in StandardInput
+-mSteerInputGravity zero case fixed in StandardInput
+-substep dt can not be greater then regular physics dt now
+-a minor steering visual orientation bug fixed in Wheel
+-over/understeer assist was active even if wheels were airborne, it is fixed now
+-you set instant travel speed with setCruiseSpeed method in ArcadeAssists
+-setting different radius for left/right wheels is not recommended,
+ if you will do that make sure the difference is small
+-drift setup is updated in drift.scene
+-to throttle/brake at the same time you need to uncheck combined axis mode
+-if you uncheck tire penetration, tires will stay on ground but they can penetrate the fenders
+-using sphere casting may not be desirable but will be more performant than too many raycasts
+-tire force scale calculation was wrong, it is fixed now 
+-sticky tire option(experimental feature) removes lateral forces generated by suspensions,
+ to make it work also vehicle update substepping is disabled when this mode is active
+
+------------------------------------------------------------------------------------------
+v1.6
+-multiplayer sample with PUN2
+-suspension improvements
+
+Notes:
+-preload length used to be removed from suspension length, it is fixed now
+-high suspension dampers could result forces that pulls the vehicle towards the ground, it is fixed now
+-an additional variable added to orbit camera that alters camera look target elevation
+-hard contact simulation is not accurate but works fine in practice, applied force depends on curent load and vehicle mass
+-getTotalWheelLoad method added to vehicle, used for calculating force share of suspension hard contact
+-engine rpm feedback value is clamped to avoid some jitter issues
+-multiplayer sample uses photon (pun 2)
+-NetworkSample class handles the initialization and connection of photon network
+-NetworkSync class handles the network synchronization of vehicles
+-multiplayer sample is pretty basic, no optimizations, authoritative with active physics
+-camera spring and distance setters added(used for multiplayer sample)
+-getter added for Transmission.mThrottleState(used for multiplayer sample)
+-rotateQuat method added to Utility, used for extrapolating rotations with angular velocity
+-mApplyInputs param added to StandardInput, if not set inputs are only calculated but not applied to vehicle
+-NetworkSync has options to sync velocities or extrapolate transforms
+
+------------------------------------------------------------------------------------------
+v1.5
+-preload option for suspensions
+-new suspension category with extended options
+-brake engagement curve added
+-simple torque splitter(ArcadeAssists)
+-new truck model included
+-bug fixes & improvements
+
+Notes:
+-max engine power is calculated and displayed in ui
+-current engine power is calculated and displayed in telemetry
+-axle telemetry shows used tire model
+-power canvas shows per axle torque share ratio
+-inactive tire model causing exception case fixed
+-legacy combine mode bug fix (not used)
+-legacy antirollbars behavior is reverted(front<->rear)
+-wheel friction is summed with axletorque now, if axletorque is zero then applied directly
+ but accCoeff is not used, it causes unwanted jitter
+-overflown suspension(tire) penetrate ground instead of fenders now
+-suspension settings are in its own category now
+-suspension rate in now per mm, total force and preload force are displayed in ui
+-suspension length is replaced with up/down travel values
+-brake engagement curve added, can be set from wheel settings tab
+-mPitch variable is clamped to avoid floating point issues
+-some Mathf.Sign calls are replaced with Math.Sign
+-new truck model shows artifacts when selected
+-torque splitter is based on rotational speed ratio
+
+------------------------------------------------------------------------------------------
+v1.4
+-new MF6.1 tire model
+-scalable moment effects of wheels(Mx,My,Mz)
+-tire pressure parameter added(works only with MF6.1)
+-added option to enable/disable each wheel
+-terrain texture based friction sample(varying_grip.scene)
+-an additional car model added
+
+Notes:
+-runtime sample updated for enable/disable wheels
+-when TerrainBasedSurface is true in Effects.cs then the list of surfaces corresponds to the textures of terrain
+-mWidthFactor, mLngAssistFactor, mLatAssistFactor removed from Wheel class
+-mLateralScale, mLongitudinalScale, mOverturnScale, mRollMomentScale, mSelfAlignScale added for scaling forces/torques
+-tire96 slipAngle & camber inputs updated according to pacejkas book
+-slipAngle is limited at extremes(~85 degree max for now)
+-instead of solver substeps you can directly set the frequency of update rate now
+-fixed a bug when rolling friction can slow down the vehicle even if you throttle
+
+------------------------------------------------------------------------------------------
+v1.3
+-improved forcefeedback script
+-sample motorcycle setup(faked with BikeHelper script)
+-bug fixes & minor improvements
+
+Notes:
+-forcefeedback calls 7 different effects of logitech sdk
+-some forcefeedback effects does not appear to work well with others,
+ for ex. LOGI_FORCE_SPRING is disabled when LOGI_FORCE_SURFACE_EFFECT is playing
+-AlignCurve could be based on the tire model but it should be manually set for now
+-all curves in forcefeedback script can be set to default values
+-fixed a bug where engine friction torque could accelerate the vehicle infinitely
+-tire feedback torque that applied to the engine was based on previous updates calculation, it is fixed now.
+
+------------------------------------------------------------------------------------------
+v1.2
+-differentials reworked
+-seperate axis mode for throttle, brake & steering
+-drift mode option for OrbitCamera script
+-nitro effect demonstration added to Effects script
+-improved sample scenes
+-bug fixes & minor improvements
+
+Notes:
+-added torque scaling option to engine, this is multiplied with torque curves output
+-lateral & longitudinal friction parameters could scale tire forces to
+ unrealistic high values. now maximum tire forces are limited with physical limits
+-lateral & longitudinal assist factors are also clamped now
+-if total torque share of axles is not "1" then a warning label is displayed in ui
+-creating a new tire model does not require you to manually set default values now
+-fixed a bug in tire model ui which caused incorrect preview curves
+-spinning tires against a wall not causing smoke case fixed
+-engine braking could activate ASR, now prevented
+
+------------------------------------------------------------------------------------------
+v1.1
+-mustang & supra models added
+-save/load option for tire models
+-joystick vibration sample with XInput
+-new arcade style recovery assists
+-improved sample scenes
+-minor bug fixes
+
+Notes:
+-new vehicle models are amateur work
+-antirollbars are rewritten, legacy antirollbars are moved to ArcadeAssists.cs
+-drift & traction assists are moved to ArcadeAssists.cs
+-transmission ui shows top speed for each gear now
+-joystick vibration sample requires XInput plugin, check JoystickVibration.cs
+-raycast layer switched from int to LayerMask
+-added a setter function for engine torque curve
+-runtime sample has more options to play now
+-abs & asr activation state is added and can be seen on Gauge UI as well
+-fixed an error case that occurs when there is no tire model available in the scene
+-reference camber in tire96 ui was in degrees, fixed & converted to radians
+-utility.findchild case sensivity bug fixed
+
+------------------------------------------------------------------------------------------
+v1.0
+-initial release
+------------------------------------------------------------------------------------------

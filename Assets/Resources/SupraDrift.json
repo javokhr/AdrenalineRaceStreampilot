@@ -1,0 +1,403 @@
+{
+    "mEngine": {
+        "mTorqueCurve": {
+            "serializedVersion": "2",
+            "m_Curve": [
+                {
+                    "serializedVersion": "3",
+                    "time": 0.0,
+                    "value": 0.0,
+                    "inSlope": 0.07500000298023224,
+                    "outSlope": 0.07500000298023224,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                },
+                {
+                    "serializedVersion": "3",
+                    "time": 1000.0,
+                    "value": 300.0,
+                    "inSlope": 0.15980833768844605,
+                    "outSlope": 0.15980833768844605,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.2368728071451187,
+                    "outWeight": 0.3333333432674408
+                },
+                {
+                    "serializedVersion": "3",
+                    "time": 4000.0,
+                    "value": 500.0,
+                    "inSlope": 0.0,
+                    "outSlope": 0.0,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                },
+                {
+                    "serializedVersion": "3",
+                    "time": 6000.0,
+                    "value": 400.0,
+                    "inSlope": -0.02500000037252903,
+                    "outSlope": -0.02500000037252903,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+        },
+        "mTorqueScale": 1.0,
+        "mIdleRpm": 1000.0,
+        "mLimitRpm": 6500.0,
+        "mLimiterTime": 80.0,
+        "mEngineInertia": 0.25,
+        "mFrictionTorque": 50.0
+    },
+    "mTransmission": {
+        "mGearRatios": [
+            2.75,
+            2.0,
+            1.5,
+            1.2999999523162842,
+            1.100000023841858,
+            1.0,
+            5.0
+        ],
+        "mFinalGearRatio": 3.5,
+        "mAutoChange": true,
+        "mAutoReverse": true,
+        "mAutoClutch": true,
+        "mChangeTime": 50.0,
+        "mClutchTime": 50.0,
+        "mGearUpRatio": 80.0,
+        "mGearDownRatio": 60.0,
+        "mClutchEngagement": {
+            "serializedVersion": "2",
+            "m_Curve": [
+                {
+                    "serializedVersion": "3",
+                    "time": 0.0,
+                    "value": 0.0,
+                    "inSlope": 1.0,
+                    "outSlope": 1.0,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                },
+                {
+                    "serializedVersion": "3",
+                    "time": 1.0,
+                    "value": 1.0,
+                    "inSlope": 1.0,
+                    "outSlope": 1.0,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+        },
+        "mClutchScale": 100.0
+    },
+    "mAxleList": [
+        {
+            "mDifferentialType": 0,
+            "mWheelOptions": {
+                "mTireModel": {
+                    "instanceID": 28210
+                },
+                "mLateralFriction": 0.8500000238418579,
+                "mLongitudinalFriction": 1.0,
+                "mLateralScale": 1.0,
+                "mLongitudinalScale": 1.0,
+                "mOverturnScale": 0.0,
+                "mRollMomentScale": 0.0,
+                "mSelfAlignScale": 0.0,
+                "mRadius": 0.3400000035762787,
+                "mWidth": 0.2549999952316284,
+                "mMass": 5.0,
+                "mTirePressure": 2.0,
+                "mBrakeTorque": 1500.0,
+                "mSuspensionUpTravel": 0.10000000149011612,
+                "mSuspensionDownTravel": 0.10000000149011612,
+                "mSuspensionSpring": 50.0,
+                "mCompressionDamper": 3000.0,
+                "mRelaxationDamper": 3000.0,
+                "mSuspensionPreload": 0.0
+            },
+            "mWheelLeft": {
+                "mWheelTransform": {
+                    "instanceID": 0
+                },
+                "mConvexMesh": {
+                    "instanceID": 0
+                },
+                "mIsActive": true
+            },
+            "mWheelRight": {
+                "mWheelTransform": {
+                    "instanceID": 0
+                },
+                "mConvexMesh": {
+                    "instanceID": 0
+                },
+                "mIsActive": true
+            },
+            "mTorqueShare": 0.0,
+            "mMaxSteerAngle": 60.0,
+            "mAckermanCoeff": 1.0,
+            "mAckermanReferenceIndex": 1,
+            "mHasHandbrake": false,
+            "mDiffStrength": 0.25,
+            "mCamberAngle": -3.0,
+            "mToeAngle": -1.0
+        },
+        {
+            "mDifferentialType": 2,
+            "mWheelOptions": {
+                "mTireModel": {
+                    "instanceID": 28210
+                },
+                "mLateralFriction": 0.949999988079071,
+                "mLongitudinalFriction": 1.0,
+                "mLateralScale": 1.0,
+                "mLongitudinalScale": 1.0,
+                "mOverturnScale": 0.0,
+                "mRollMomentScale": 0.0,
+                "mSelfAlignScale": 0.0,
+                "mRadius": 0.3400000035762787,
+                "mWidth": 0.2750000059604645,
+                "mMass": 5.0,
+                "mTirePressure": 2.0,
+                "mBrakeTorque": 5500.0,
+                "mSuspensionUpTravel": 0.10000000149011612,
+                "mSuspensionDownTravel": 0.10000000149011612,
+                "mSuspensionSpring": 40.0,
+                "mCompressionDamper": 3000.0,
+                "mRelaxationDamper": 3000.0,
+                "mSuspensionPreload": 0.0
+            },
+            "mWheelLeft": {
+                "mWheelTransform": {
+                    "instanceID": 0
+                },
+                "mConvexMesh": {
+                    "instanceID": 0
+                },
+                "mIsActive": true
+            },
+            "mWheelRight": {
+                "mWheelTransform": {
+                    "instanceID": 0
+                },
+                "mConvexMesh": {
+                    "instanceID": 0
+                },
+                "mIsActive": true
+            },
+            "mTorqueShare": 1.0,
+            "mMaxSteerAngle": 0.0,
+            "mAckermanCoeff": 1.0,
+            "mAckermanReferenceIndex": 1,
+            "mHasHandbrake": true,
+            "mDiffStrength": 0.5,
+            "mCamberAngle": -1.0,
+            "mToeAngle": 2.200000047683716
+        }
+    ],
+    "mStandardInput": {
+        "mEnabled": true,
+        "mControllerType": 0,
+        "mShifterType": 0,
+        "mUseRawAxis": true,
+        "mCombinedAxis": true,
+        "mVerticalAxis": "Vertical",
+        "mHorizontalAxis": "Horizontal",
+        "mThrottleAxis": "Vertical",
+        "mBrakeAxis": "Vertical",
+        "mLeftAxis": "Horizontal",
+        "mRightAxis": "Horizontal",
+        "mClutchAxis": "Clutch",
+        "mHandbrakeAxis": "Handbrake",
+        "mShiftAxis": "SequentialGear",
+        "mShift1Axis": "",
+        "mShift2Axis": "",
+        "mShift3Axis": "",
+        "mShift4Axis": "",
+        "mShift5Axis": "",
+        "mShift6Axis": "",
+        "mShiftRAxis": "",
+        "mSteerSensivity": 5.0,
+        "mSteerSpeedCurve": {
+            "serializedVersion": "2",
+            "m_Curve": [
+                {
+                    "serializedVersion": "3",
+                    "time": 0.0,
+                    "value": 2.0,
+                    "inSlope": -0.015450715087354184,
+                    "outSlope": -0.015450715087354184,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.01866977848112583
+                },
+                {
+                    "serializedVersion": "3",
+                    "time": 400.0,
+                    "value": 0.10000000149011612,
+                    "inSlope": 0.0,
+                    "outSlope": 0.0,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+        },
+        "mSteerLimitCurve": {
+            "serializedVersion": "2",
+            "m_Curve": [
+                {
+                    "serializedVersion": "3",
+                    "time": 0.0,
+                    "value": 100.0,
+                    "inSlope": 0.0,
+                    "outSlope": 0.0,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                },
+                {
+                    "serializedVersion": "3",
+                    "time": 300.0,
+                    "value": 1.0,
+                    "inSlope": 0.0,
+                    "outSlope": 0.0,
+                    "tangentMode": 0,
+                    "weightedMode": 0,
+                    "inWeight": 0.3333333432674408,
+                    "outWeight": 0.3333333432674408
+                }
+            ],
+            "m_PreInfinity": 2,
+            "m_PostInfinity": 2,
+            "m_RotationOrder": 4
+        },
+        "mSteerInputGravity": 3.0,
+        "mSteerRange": 100.0,
+        "mSteerDeadzone": 0.10000000149011612,
+        "mThrottleSensivity": 3.0,
+        "mThrottleRange": 100.0,
+        "mThrottleDeadzone": 0.009999999776482582,
+        "mBrakingSensivity": 3.0,
+        "mBrakingRange": 100.0,
+        "mBrakingDeadzone": 0.009999999776482582,
+        "mClutchSensivity": 3.0,
+        "mClutchRange": 100.0,
+        "mClutchDeadzone": 0.009999999776482582,
+        "mSteeringAssist": 0.0,
+        "mSteeringAssistThresholdAngle": 5.0
+    },
+    "mAeroDynamics": {
+        "mDragCoefficient": 0.5,
+        "mDownForceCoefficient": 0.5,
+        "mDownForceZOffset": 0.0
+    },
+    "mTelemetry": {
+        "TextColor": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0,
+            "a": 1.0
+        },
+        "Show": false,
+        "ShowAeroDynamics": false,
+        "ShowAxles": false,
+        "ShowEngine": false,
+        "ShowInput": false,
+        "ShowTransmission": false,
+        "ShowVehicle": false,
+        "ShowWheels": false
+    },
+    "mUpdateRate": 500,
+    "mMass": 1300.0,
+    "mInertiaScale": {
+        "x": 1.5,
+        "y": 2.0,
+        "z": 1.5
+    },
+    "mCenterofMass": {
+        "x": 0.0,
+        "y": -0.05000000074505806,
+        "z": 0.05000000074505806
+    },
+    "mCastType": 0,
+    "mRays": 1,
+    "mLateralRays": 1,
+    "mRaycastLayer": {
+        "serializedVersion": "2",
+        "m_Bits": 1
+    },
+    "mHandBrakePower": 2.5,
+    "mRollingResistanceCoeff": 1.0,
+    "mAllowReverse": true,
+    "mHardContact": false,
+    "mRelaxationDownforce": false,
+    "mTirePenetration": true,
+    "mDetectGround": false,
+    "mReactionScale": 0.0,
+    "mBrakeEngagement": {
+        "serializedVersion": "2",
+        "m_Curve": [
+            {
+                "serializedVersion": "3",
+                "time": 0.0,
+                "value": 0.0,
+                "inSlope": 1.0,
+                "outSlope": 1.0,
+                "tangentMode": 0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            },
+            {
+                "serializedVersion": "3",
+                "time": 1.0,
+                "value": 1.0,
+                "inSlope": 1.0,
+                "outSlope": 1.0,
+                "tangentMode": 0,
+                "weightedMode": 0,
+                "inWeight": 0.3333333432674408,
+                "outWeight": 0.3333333432674408
+            }
+        ],
+        "m_PreInfinity": 2,
+        "m_PostInfinity": 2,
+        "m_RotationOrder": 4
+    },
+    "mABS": 0.0,
+    "mASR": 0.0,
+    "mUnderSteerAssist": 0.0,
+    "mMinUnderSteerAngle": 1.0,
+    "mOverSteerAssist": 0.0,
+    "mMinOverSteerAngle": 1.0,
+    "mFrontAntiRollPower": 0.0,
+    "mRearAntiRollPower": 0.0,
+    "mStickyTireSpeed": 0.0
+}

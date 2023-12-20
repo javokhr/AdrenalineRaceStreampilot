@@ -1,0 +1,3 @@
+get it here : https://www.dropbox.com/s/nn7m1zshcygui57/api.chm?dl=0
+
+*if api documents content is not visible, right click the .chm file and unblock the file from properties.

@@ -1,0 +1,66 @@
+-------------------------------------------------------------------
+extra controls : in addition to standard input controls
+*R for instant reset if using CarManager script
+*N for nitro if using Effects script
+*B for look back if using OrbitCamera script
+-------------------------------------------------------------------
+basic.scene
+*this is the simplest scene with a vehicle with default parameters
+*if you follow the quickstart tutorial this is the scene you get
+-------------------------------------------------------------------
+bikes.scene
+*contains two bikes with different bikehelper scripts
+-------------------------------------------------------------------
+challenge.scene
+*drive through a challenging parkour with a 4x4 vehicle
+*showcases convex casting and wheel reaction forces
+-------------------------------------------------------------------
+constraint.scene
+*contains two identical vehicles, one with SuspensionConstraint script attached
+*two haevy boxes are put on the vehicles to demonstrate the effect of constraints
+-------------------------------------------------------------------
+drift.scene
+*drift setup sample scene
+*vehicle uses Tire96Basic model
+-------------------------------------------------------------------
+mobile_race.scene
+*race with four other ai drivers
+*simpler graphics
+*StandartInput is disabled and MobileInput.cs is attached
+-------------------------------------------------------------------
+multiplayer.scene
+*requires pun2(follow instructions in NetworkSample.cs and NetworkSync.cs)
+*NetworkSample script is attached to NetManager gameobject
+*this script connects to photon network and instantiates a networked vehicle(sample networked vehicle is Resources/hbFwdNetwork)
+-------------------------------------------------------------------
+race.scene
+*FWD hatchback setup
+*race with two other ai drivers + a truck
+*to enable forcefeedback:
+	1-set Controller mode to "WHEEL" in input settings
+	2-activate ForceFeedback script on player car
+	3-follow instructions in ForceFeedback.cs
+-------------------------------------------------------------------
+rewind_replay.scene
+*contains 3 vehicle from sandbox scene
+*RewindReplay script is attached to the camera
+*you can rewind & replay by using the gui
+-------------------------------------------------------------------
+runtime.scene
+*RuntimeSample.cs is attached to an empty gameobject
+*this script automatically creates the same setup as basic.scene
+*also contains a gui for updating some parameters of the vehicle in runtime
+-------------------------------------------------------------------
+sandbox.scene
+*this is a playground scene with different setups
+*tractor trailers front axle is hidden(single axle is not possible)
+*motocycle is fake(still 4 wheels) and can behave jittery with low physics rates(100hz recommended)
+-------------------------------------------------------------------
+stresstest.scene
+*contains 50 fwd hatchback vehicles
+-------------------------------------------------------------------
+varying_grip.scene
+*demonstrates using terrain texture for determining surface friction
+*current friction coeff for each wheel can be seen on gui
+*vehicle uses TireMF61Rally tire model
+-------------------------------------------------------------------

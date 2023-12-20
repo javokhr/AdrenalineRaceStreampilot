@@ -1,0 +1,88 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &4887920097992975163
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: -981782303536421406, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: Active
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 50567416600610754, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_Name
+      value: 2_Iapetus Variant
+      objectReference: {fileID: 0}
+    - target: {fileID: 50567416600610754, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 198614760979849220, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_TagString
+      value: Untagged
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473787850667876867, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: mStandardInput.mEnabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473787850667876867, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: mStandardInput.mClutchAxis
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 3473787850667876867, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: mStandardInput.mHandbrakeAxis
+      value: Horizontal
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -0.6577353
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 8.058584
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7021499256908022262, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 6960852772308842638, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bfb5f8f987b016b47ab157145682efd7, type: 3}
