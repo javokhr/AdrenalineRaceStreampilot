@@ -3,9 +3,8 @@ using UnityEngine;
 public class AdManager : MonoBehaviour
 {
     public static AdManager Instance { get; private set; }
-    //public void Preloader() => GP_Ads.ShowPreloader();
+    public void Preloader() => GP_Ads.ShowPreloader();
     public void Fullscreen() => GP_Ads.ShowFullscreen();
-
     private void Start()
     {
         if (!GP_Device.IsMobile())

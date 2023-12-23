@@ -4,9 +4,15 @@ public class SceneSwitcher : MonoBehaviour
     public string targetSceneName; // Имя целевой сцены для перехода
 
     [SerializeField] private GameObject gameOverPopUpPrefab;
+    [SerializeField] private GameObject pauseUI;
 
     public void SwitchToTargetScene() // возвращение домой
     {
+        if (pauseUI != null)
+        {
+            pauseUI.SetActive(false);
+        }
+
         CheckMobileCanavas();
         LoadingScreenController.instance.LoadLevel(targetSceneName); // Вызываем метод загрузки уровня из LoadingScreenController
         // Включаем время
@@ -17,6 +23,10 @@ public class SceneSwitcher : MonoBehaviour
 
     public void RestartGame()
     {
+        if (pauseUI != null)
+        {
+            pauseUI.SetActive(false);
+        }
         // Здесь вы можете добавить логику для перезапуска игры
         // Например, сбросить позицию и состояние машины, сбросить время и т.д.
         GameObject gameOverPopUp = gameOverPopUpPrefab;
@@ -39,5 +49,19 @@ public class SceneSwitcher : MonoBehaviour
         {
             mobileUI.SetActive(false);
         }
+    }
+
+    public void PauseButton()
+    {
+        Time.timeScale = 0f;
+
+        pauseUI.SetActive(true);
+    }
+
+    public void ContinueButton()
+    {
+        pauseUI.SetActive(false);
+
+        Time.timeScale = 1f;
     }
 }
