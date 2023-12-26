@@ -23,7 +23,7 @@ public class PlayerData
         else
         {
             // Если файл не существует, устанавливаем начальное значение в 20000 и сохраняем его
-            money = 15000;
+            money = 11000;
             SavePlayerData();
         }
     }
@@ -68,11 +68,11 @@ public class GameManager : MonoBehaviour
         }
     }
     /*
-        private void Start()
-        {
-            //PlayerPrefs.DeleteAll();
-            UpdateMoneyUI();
-        }
+    private void Start()
+    {
+        PlayerPrefs.DeleteAll();
+        UpdateMoneyUI();
+    }
     */
     public PlayerData GetPlayerData()
     {
