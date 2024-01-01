@@ -450,9 +450,9 @@ PlayerSettings:
     PROGRESS_BAR_BACKGROUND_COLOR: 
     PROGRESS_BAR_BORDER_COLOR: 
     PROGRESS_BAR_FILL_COLOR: 
-    PROJECT_ID: 8416
-    SHOW_PRELOADER_AD: true
-    TOKEN: Su2JXnfU89aHGjqwxSIBtCZ43tNPiQrO
+    PROJECT_ID: 2290
+    SHOW_PRELOADER_AD: false
+    TOKEN: uCHm0VJOo9cKr2ZgrLStPejf5bywUb3u
   mobileMTRendering:
     Android: 1
     iPhone: 1

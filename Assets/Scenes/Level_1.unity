@@ -3195,7 +3195,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1389449535}
         m_TargetAssemblyTypeName: AdManager, Assembly-CSharp
-        m_MethodName: Preloader
+        m_MethodName: Fullscreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4880,6 +4880,10 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
       value: 
       objectReference: {fileID: 1389449535}
+    - target: {fileID: 6674166040030341745, guid: 86a3888492a07ef46bc03028104a8304, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: Fullscreen
+      objectReference: {fileID: 0}
     - target: {fileID: 6750038381334342753, guid: 86a3888492a07ef46bc03028104a8304, type: 3}
       propertyPath: m_Pivot.x
       value: 0.5
@@ -7262,6 +7266,10 @@ PrefabInstance:
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[2].m_Target
       value: 
       objectReference: {fileID: 1389449535}
+    - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[2].m_MethodName
+      value: Fullscreen
+      objectReference: {fileID: 0}
     - target: {fileID: 7061574243370088152, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
       propertyPath: m_SizeDelta.x
       value: 270

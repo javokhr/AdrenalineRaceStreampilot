@@ -7655,16 +7655,24 @@ PrefabInstance:
       value: Popup_GameOver
       objectReference: {fileID: 0}
     - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
-      value: 
-      objectReference: {fileID: 761441988}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
+      objectReference: {fileID: 0}
     - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target
       value: 
       objectReference: {fileID: 1389449535}
     - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
-      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_Target
+      value: 
+      objectReference: {fileID: 761441988}
+    - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_MethodName
       value: Fullscreen
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
+      value: SwitchToTargetScene
       objectReference: {fileID: 0}
     - target: {fileID: 7110400925825497444, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
       propertyPath: m_Pivot.x
@@ -9598,9 +9606,9 @@ MonoBehaviour:
   onClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 761441988}
-        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
-        m_MethodName: SwitchToTargetScene
+      - m_Target: {fileID: 1389449535}
+        m_TargetAssemblyTypeName: AdManager, Assembly-CSharp
+        m_MethodName: Fullscreen
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -9610,9 +9618,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1389449535}
-        m_TargetAssemblyTypeName: AdManager, Assembly-CSharp
-        m_MethodName: Fullscreen
+      - m_Target: {fileID: 761441988}
+        m_TargetAssemblyTypeName: SceneSwitcher, Assembly-CSharp
+        m_MethodName: SwitchToTargetScene
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

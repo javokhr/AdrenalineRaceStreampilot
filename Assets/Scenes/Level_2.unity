@@ -7562,9 +7562,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a24bc7e8573847adbdf1198360b3c794, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_References:
-    m_Keys: []
-    m_Values: []
 --- !u!4 &1763689357
 Transform:
   m_ObjectHideFlags: 1
@@ -8504,6 +8501,10 @@ PrefabInstance:
     - target: {fileID: 5939790113329213180, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
       propertyPath: m_Name
       value: Popup_GameOver
+      objectReference: {fileID: 0}
+    - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
+      propertyPath: onClick.m_PersistentCalls.m_Calls.Array.size
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6919822334159907063, guid: 7ca81fea64db25a49844838cf7e21353, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[0].m_Target

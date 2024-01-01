@@ -3,7 +3,7 @@ using UnityEngine;
 public class AdManager : MonoBehaviour
 {
     public static AdManager Instance { get; private set; }
-    public void Preloader() => GP_Ads.ShowPreloader();
+    //public void Preloader() => GP_Ads.ShowPreloader();
     public void Fullscreen() => GP_Ads.ShowFullscreen();
     private void Start()
     {
@@ -94,4 +94,9 @@ public class AdManager : MonoBehaviour
         //GP_GamesCollections.Open("219");
         GP_GamesCollections.Open("243");
     }
+
+    public void Share() => GP_Socials.Share();
+    public void Post() => GP_Socials.Post();
+    public void Invite() => GP_Socials.Invite();
+    public void JoinCommunity() => GP_Socials.JoinCommunity();
 }
