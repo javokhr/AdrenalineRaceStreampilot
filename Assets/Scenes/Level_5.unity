@@ -12181,7 +12181,7 @@ MonoBehaviour:
       m_Calls:
       - m_Target: {fileID: 1389449535}
         m_TargetAssemblyTypeName: AdManager, Assembly-CSharp
-        m_MethodName: Fullscreen
+        m_MethodName: Preloader
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}

@@ -4882,7 +4882,7 @@ PrefabInstance:
       objectReference: {fileID: 1389449535}
     - target: {fileID: 6674166040030341745, guid: 86a3888492a07ef46bc03028104a8304, type: 3}
       propertyPath: onClick.m_PersistentCalls.m_Calls.Array.data[1].m_MethodName
-      value: Fullscreen
+      value: Preloader
       objectReference: {fileID: 0}
     - target: {fileID: 6750038381334342753, guid: 86a3888492a07ef46bc03028104a8304, type: 3}
       propertyPath: m_Pivot.x

@@ -447,12 +447,13 @@ PlayerSettings:
   openGLRequireES32: 0
   m_TemplateCustomTags:
     OVERLAY_BACKGROUND_COLOR: 
+    PRODUCT_DESCRIPTION: 
     PROGRESS_BAR_BACKGROUND_COLOR: 
     PROGRESS_BAR_BORDER_COLOR: 
     PROGRESS_BAR_FILL_COLOR: 
-    PROJECT_ID: 2290
-    SHOW_PRELOADER_AD: false
-    TOKEN: uCHm0VJOo9cKr2ZgrLStPejf5bywUb3u
+    PROJECT_ID: 8416
+    SHOW_PRELOADER_AD: true
+    TOKEN: Su2JXnfU89aHGjqwxSIBtCZ43tNPiQrO
   mobileMTRendering:
     Android: 1
     iPhone: 1
